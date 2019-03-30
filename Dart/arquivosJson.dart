@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:convert';
-import 'dart:async';
 
 void main() async {
   var file = new File("data.json");
