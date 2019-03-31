@@ -1,10 +1,10 @@
 import 'aluno.dart';
 
 void main() {
-  var cristiano = new Aluno("Cristiano", "Cunha", 20);
+  var cristiano = new Aluno("Cristiano", "Cunha", 20, "2018211...");
   printarAluno(cristiano);
   print("Idade usando getter: ${cristiano.Idade}");
-
+  print("Override: ${cristiano.toString()}");
   try {
     print("------------------------\nSetando idade inválida");
     cristiano.Idade = -2;
@@ -14,5 +14,6 @@ void main() {
 }
 
 void printarAluno(Aluno aluno) {
-  print("Nome completo: ${aluno.ObterNomeCompleto()}, ${aluno.Idade} anos.");
+  print(
+      "Dados: ${aluno.ObterNomeCompleto()}, ${aluno.Idade} anos, matrícula: ${aluno.Matricula}.");
 }

@@ -1,34 +1,21 @@
-class Aluno {
-  String _nome;
-  String _sobrenome;
-  int _idade;
+import 'pessoa.dart';
 
-  Aluno(String nome, String sobrenome, int idade) {
-    _nome = nome;
-    _sobrenome = sobrenome;
-    _idade = idade;
+class Aluno extends Pessoa {
+  Aluno(String nome, String sobrenome, int idade, String matricula)
+      : super(nome, sobrenome, idade) {
+    Matricula = matricula;
   }
 
-  void set Idade(int idade) {
-    if (idade < 0) throw new ArgumentError("Idade inválida!");
-    _idade = idade;
+  String _matricula;
+
+  void set Matricula(String matricula) {
+    this._matricula = matricula;
   }
 
-  int get Idade => _idade;
+  String get Matricula => _matricula;
 
-  void set Nome(String nome) {
-    _nome = nome;
-  }
-
-  String get Nome => _nome;
-
-  void set Sobrenome(String sobrenome) {
-    _sobrenome = sobrenome;
-  }
-
-  String get Sobrenome => _sobrenome;
-
-  String ObterNomeCompleto() {
-    return "${_nome} ${_sobrenome}";
+  @override
+  String toString() {
+    return "Override! \\o/";
   }
 }
