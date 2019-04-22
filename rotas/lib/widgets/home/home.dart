@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rotas/widgets/about/aboutMe.dart';
+import 'package:rotas/widgets/projects/listProjects.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
@@ -25,14 +26,31 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               'Cristiano Raffi Cunha',
-              style: TextStyle(color: Colors.blueGrey, fontSize: 25),
+              style: TextStyle(color: Colors.blueGrey, fontSize: 30),
             ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AboutMe()));
-              },
-              child: Text("Sobre"),
+            Column(
+              children: <Widget>[
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AboutMe()));
+                  },
+                  child: Text(
+                    "Sobre",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                  elevation: 5,
+                ),
+                RaisedButton(
+                  onPressed: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ListProject())),
+                  elevation: 5,
+                  child: Text(
+                    "Lista",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                )
+              ],
             )
           ],
         ),

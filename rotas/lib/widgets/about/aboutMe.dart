@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -30,8 +29,14 @@ class AboutMe extends StatelessWidget {
                 ),
               ),
               RaisedButton(
-                onPressed: ()async {await launch("https://cristianoprogramador.com");},
-                child: Text("Site Pessoal"),
+                onPressed: () async {
+                  await launch("https://cristianoprogramador.com");
+                },
+                child: Text(
+                  "Site Pessoal",
+                  style: TextStyle(fontSize: 20),
+                ),
+                elevation: 5,
               )
             ],
           ),
